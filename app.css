@@ -6,6 +6,12 @@
   vertical-align: baseline;
   --main-blue-bg: #60a9ff;
   --main-border-color: #e1f1ff;
+  --header-color: #888;
+  --features-color: #016ff9;
+  --button-color: #348efe;
+  --button-border-color: #9dd1ff;
+  --button-bg-color: #48aaff;
+  --button-featured-bg-color-hover: #269aff;
 }
 
 html {
@@ -50,4 +56,77 @@ ul {
 .pricing-img {
   margin-bottom: 25px;
   width: 100%;
+}
+
+.pricing-header {
+  color: var(--header-color);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.pricing-features {
+  margin: 5rem 0 2.5rem;
+  color: var(--features-color);
+}
+
+.pricing-features-item {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--main-border-color);
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.pricing-price {
+  color: var(--features-color);
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.pricing-button {
+  border: 1px solid var(--button-border-color);
+  border-radius: 1rem;
+  color: var(--button-color);
+  display: inline-block;
+  padding: 1.5rem 3.5rem;
+  text-decoration: none;
+  margin: 2.5rem 0;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: var(--main-border-color);
+}
+
+.pricing-button.is-featured {
+  background-color: var(--button-bg-color);
+  color: white;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+  background-color: var(--button-featured-bg-color-hover);
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .panel {
+    flex-direction: row;
+  }
+
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px solid var(--main-border-color);
+    padding: 2.5rem 5rem;
+  }
+
+  .pricing-plan:last-child {
+    border-right: none;
+  }
 }
